@@ -3,7 +3,7 @@
 (defun naive (n)
   "Enumerate prime numbers up to value n (included) using a naive
    sieve of Eratosthenes. Requires at least n bits of memory.
-   Returns a list of primes (p1 p2 p3 ...)."
+   Returns the list of prime numbers (p1 p2 p3 ...) in increasing order."
   (let (;; Sieve starts from 0. Value 1 for eliminated numbers.
         (sieve (make-array (1+ n) :element-type 'bit))
         ;; There are no multiples to sieve of numbers >sqrt(n).
